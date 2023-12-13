@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="./style.css">
+    <title>Home</title>
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <image src="../images/note.png"></image>
+            <h1>LogME</h1>
+        </div>
+    </header>
+
+    <main class="hidden">
+
+        <div class="linha-data">
+            <input id="data-log" type="date" inputmode="numeric" required />
+            <span id="pesquisar-data" class="material-icons-round btn">search</span>
+            <span id="menu-data" class="material-icons-round btn">more_vert</span>
+        </div>
+
+        <div class="linha-titulo">
+            <input id="titulo-log" type="text" placeholder="Título do Log" inputmode="full-width-latin" maxlength="40" />
+            <span id="menu-log" class="material-icons-round btn">more_vert</span>
+        </div>
+
+        <div class="linha-log">
+            <textarea id="conteudo-log" placeholder="Log" maxlength="2000"></textarea>
+
+            <div class="coluna-log">
+                <span id="bom" class="material-icons-round btn-face">sentiment_satisfied</span>
+                <span id="neutro" class="material-icons-round btn-face">sentiment_neutral</span>
+                <span id="ruim" class="material-icons-round btn-face">sentiment_dissatisfied</span>
+
+                <span id="save-log" class="material-icons-round btn-disabled">save</span>
+            </div>
+        </div>
+
+        <div class="linha-nav">
+            <div>
+                <span id="up" class="material-icons-round btn">keyboard_arrow_down</span>
+                <span id="down" class="material-icons-round btn">keyboard_arrow_up</span>
+            </div>
+            <div>
+                <span id="left" class="material-icons-round btn">keyboard_arrow_left</span>
+                <span id="right" class="material-icons-round btn">keyboard_arrow_right</span>
+            </div>
+        </div>
+
+        <div id="lista-logs" class="coluna-lista"></div>
+
+        <template id="modelo-registro">
+            <div class="linha-registro">
+                <p>Titulo do log</p>
+                <span class="material-icons-round">sentiment_satisfied</span>
+            </div>
+        </template>
+
+        <template id="modelo-registro-vazio">
+            <div class="linha-registro">
+                <p class="primeiro-log">Faça seu primeiro log deste dia!</p>
+            </div>
+        </template>
+
+    </main>
+
+    <script type="module" src="./script.js"></script>
+</body>
+
+</html>

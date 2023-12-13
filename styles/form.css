@@ -1,0 +1,42 @@
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.button-bar {
+    display: flex;
+    flex-direction: row;
+}
+
+button {
+    margin: 0 5px 0 0;
+    min-width: 90px;
+}
+
+select,
+input,
+button,
+input[type="date"] {
+    min-height: 33px;
+    font-size: 22px;
+    border: var(--border-size) solid var(--border-color-control);
+    border-radius: var(--border-radius);
+}
+
+textarea {
+    font-size: var(--base-font-size);
+    border: var(--border-size) solid var(--border-color-control);
+    border-radius: var(--border-radius);
+}
+
+@media only screen and (max-width: 320px) {
+    .button-bar {
+        display: flex;
+        flex-direction: column;
+    }
+
+    button {
+        margin: 0 0 5px 0;
+        min-width: 90px;
+    }
+}

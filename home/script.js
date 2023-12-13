@@ -1,0 +1,1 @@
+import "../scripts/js/pages/home/controller.js";
